@@ -289,7 +289,7 @@ void main(){
 
           if( res2.y > 3. ){
             
-            refrCol -= c;// -dot( n2 , rd2) * c * textureCube( t_cube , normalize( n2 )).xyz ;;
+            refrCol += c *  1.+dot( n2 , rd2);// * c * textureCube( t_cube , normalize( n2 )).xyz ;;
           
           }else{
            // col = refr3; //vec3( 1. , 0. , 0. );
