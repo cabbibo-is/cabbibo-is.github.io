@@ -18,12 +18,19 @@
 
       #textStuff{
         position: absolute;
-        left:30px;
+        right:80px;
+        text-align: right;
+        bottom:120px;
       }
 
       @font-face {
         font-family: "GeoSans";
         src: url("GeosansLight.ttf");
+      }
+
+      li{
+        font-size: 20px;
+    list-style-type: none;
       }
 
       #clik{
@@ -43,6 +50,12 @@
         padding:20px;
       }
 
+      h1{
+        padding-top: 0px;
+        margin-top: 10px;
+        font-size: 60px;
+      }
+
     </style>
   </head>
 
@@ -56,35 +69,44 @@
 
   <body>
 
-    <div id="textStuff">
+
+    <div id="textStuff">  
+
+
+    
 
     <div id="demos">
-    <h2>Vive Demos!</h2>
     <ul>
-      <li><a href="https://drive.google.com/open?id=0B7vwPbhHoNaWa3NnSjZLMTNwQmc">donut5_ringGrub</a> - <a href="https://soundcloud.com/duxcontent">Dux Content</a></li>
-      <li><a href="https://drive.google.com/open?id=0B7vwPbhHoNaWazY3ampDZ1hCams">donut4_sunset</a> - <a href="http://sigur-ros.co.uk/">Sigur Ros</a> </a></li>
-      <li><a href="https://drive.google.com/open?id=0B7vwPbhHoNaWMTNobldCWnRHcjg">donut2</a> - <a href="https://soundcloud.com/duxcontent">Dux Content</a></li>
-      <li><a href="https://drive.google.com/open?id=0B7vwPbhHoNaWUnNOcHVGM0VVb1k">goojell</a> - <a href="http://www.steveteeps.com/">Teeps</a></li>
-      <li><a href="https://drive.google.com/open?id=0B7vwPbhHoNaWeU14Q0JLUi1wWmM">Vorg</a> - <a href="http://sigur-ros.co.uk/">Sigur Ros</a> | <a href="http://www.steveteeps.com/">Teeps</a></li>
+    <li><h2>Steam</h2></li>
+    <li><a href="http://store.steampowered.com/app/420840/">$3 - Blarp</a></li>
+    <li><h2>Experiments</h2></li>
+
+
+      <li><a href="https://drive.google.com/open?id=0B7vwPbhHoNaWa3NnSjZLMTNwQmc">donut5_ringGrub</a></li>
+      <li><a href="https://drive.google.com/open?id=0B7vwPbhHoNaWazY3ampDZ1hCams">donut4_sunset</a></li>
+      <li><a href="https://drive.google.com/open?id=0B7vwPbhHoNaWMTNobldCWnRHcjg">donut2</a></li>
+      <li><a href="https://drive.google.com/open?id=0B7vwPbhHoNaWUnNOcHVGM0VVb1k">goojell</a></li>
+      <li><a href="https://drive.google.com/open?id=0B7vwPbhHoNaWeU14Q0JLUi1wWmM">Vorg</a></li>
       <li><a href="https://drive.google.com/open?id=0B7vwPbhHoNaWODNPbmpWOWVURDg">metaCloth</a></li>
       <li><a href="https://drive.google.com/open?id=0B7vwPbhHoNaWZTdQWU1OenZrTDA">donutInterplace1</a></li>
       <li><a href="https://drive.google.com/open?id=0B7vwPbhHoNaWNkJxYktmSUwweTA">4L1</a></li>
       <li><a href="https://drive.google.com/open?id=0B7vwPbhHoNaWOW9hOUNMbE1NTFE">lizRoomBug</a></li>
       <li><a href="https://drive.google.com/open?id=0B7vwPbhHoNaWY29BS0tuUi02bHc">whiskersBox</a></li>
-      <li><a href="https://drive.google.com/open?id=0B7vwPbhHoNaWNUg1ZnliZXVxM2s">lorn1</a> - <a href="https://soundcloud.com/lorn">Lorn</a></li>
+      <li><a href="https://drive.google.com/open?id=0B7vwPbhHoNaWNUg1ZnliZXVxM2s">lorn1</a></li>
     </ul>
     </div>
 
 
     <div id="words">
-    <h2>Words!</h2>
+
       <ul>
         <li><a href="https://docs.google.com/document/d/1-UYCZcxKDmy5BF_-IXg1KDtwShJ5imNOch5xGPXzPr0/edit?usp=sharing">10 Quick Things I've Learned in VR</a></li>
+        <li><a href="https://www.shadertoy.com/view/Xl2XWt">SDF Tutorial 1: Box & Balloon </a></li>
       </ul>
       </div>
 
     <div id="web">
-    <h2 >Web!</h2>
+
 
     <ul>
       <li><a href="http://cabbi.bo/enough">ENOUGH</a></li>
@@ -94,7 +116,7 @@
     </div>
 
     <div id="hello">
-    <h2>Hello!</h2>
+
     <ul>
       <li><a href="http://twitter.com/cabbibo">Twitter</a></li>
       <li><a href="https://www.facebook.com/isaac.cohen.967">Facebook</a></li>
@@ -107,23 +129,14 @@
 
     </div>
 
-    <div id="money">
-    <form action="http://store.steampowered.com/app/420840/" method="post" target="_top">
-      <input type="image" alt="$3 : Buy BLARP!">
-      </form>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-      <input type="hidden" name="cmd" value="_s-xclick">
-      <input type="hidden" name="hosted_button_id" value="5VYBSZY7GJ3JW">
-      <input type="image" src="" border="0" name="submit" alt="$2 : Buy me a Cold Brew" ></input>
-    </form>
-    </div>
+
 
 
     <div id ="clik">
-      <a onclick="show('demos')"> Demos </a>
-      <a onclick="show('words')"> Words </a>
-      <a onclick="show('web')"> Web </a>
-      <a onclick="show('hello')"> Hello </a>
+      <a onclick="show('demos')"> vive </a>
+      <a onclick="show('words')"> words </a>
+      <a onclick="show('web')"> web </a>
+      <a onclick="show('hello')"> hello </a>
     </div>
   
     <script>
@@ -139,8 +152,10 @@
       G.demos = document.getElementById("demos");
       G.hello = document.getElementById("hello");
       G.textStuff = document.getElementById("textStuff");
+      G.is = document.getElementById("is");
     }
     function hideAll(){
+      //if( document.contains( G.is ) ){G.textStuff.removeChild( G.is);}
       if( document.contains( G.web ) ){G.textStuff.removeChild( G.web );}
       if( document.contains( G.words ) ){G.textStuff.removeChild( G.words );}
       if( document.contains( G.demos ) ){G.textStuff.removeChild( G.demos );}
@@ -150,7 +165,40 @@
     function show( name ){
 
       hideAll();
-      G.textStuff.appendChild( G[name]);
+
+      if( name != "is"){
+        G.textStuff.appendChild( G[name]);
+      }
+
+      //G.is.innerHTML = name;
+
+
+
+      if( name == "demos"){
+        G.uniforms.t_cube.value = G.parkMap;
+        G.uniforms.noiseSize1.value = .1;
+        G.uniforms.noiseSize2.value = .5;
+      }
+
+      if( name == "words"){
+        G.uniforms.t_cube.value = G.skyMap;
+        G.uniforms.noiseSize1.value = 4.1;
+        G.uniforms.noiseSize2.value = 2;
+      }
+
+      if( name == "web"){
+        G.uniforms.t_cube.value = G.castleMap;
+        G.uniforms.noiseSize1.value = .6;
+        G.uniforms.noiseSize2.value = 1;
+      }
+
+      if( name == "hello"){
+        G.uniforms.t_cube.value = G.pisaMap;
+        G.uniforms.noiseSize1.value = 2;
+        G.uniforms.noiseSize2.value = 5;
+      }
+      
+      G.sp.material.needsUpdate = true;
       //G.textStuff.removeChild( G.web );
     }
 

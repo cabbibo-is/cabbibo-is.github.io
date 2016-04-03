@@ -14,8 +14,13 @@ G.init = function(){
 
   G.uniforms = {
     time: {type:"f", value:0},
-    iModelMat:{type:"m4", value:new THREE.Matrix4()}
+    iModelMat:{type:"m4", value:new THREE.Matrix4()},
+    t_cube:{type:"t", value: null },
+    noiseSize1:{type:"f", value:1},
+    noiseSize2:{type:"f", value:1},
   }
+
+  G.uniforms.t_cube.value = G.skyMap;
 
   var ar = window.innerWidth / window.innerHeight;
 
@@ -39,7 +44,7 @@ G.init = function(){
   G.three.stats.domElement.style.left = "0px";
   G.three.stats.domElement.style.bottom = "-30px";
   G.three.stats.domElement.style.zIndex = "999";
-  document.body.appendChild( G.three.stats.domElement );
+ // document.body.appendChild( G.three.stats.domElement );
 
 
   G.controls = new THREE.TrackballControls( G.three.camera );

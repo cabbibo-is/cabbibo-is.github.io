@@ -1,6 +1,7 @@
 function beginLoad(){
   loadShaders();
   loadAudio();
+  loadCubeMap();
 }
 
 function loadShaders(){
@@ -32,6 +33,101 @@ function loadImage(url){
 
 }
 
+function loadCubeMap(){
+
+  G.loading.neededToLoad ++;
+  G.loading.neededToLoad ++;
+  G.loading.neededToLoad ++;
+  G.loading.neededToLoad ++;
+
+  var path = "milky/dark-s_";
+  var format = '.jpg';
+  var urls = [
+      path + 'px' + format, path + 'nx' + format,
+      path + 'py' + format, path + 'ny' + format,
+      path + 'pz' + format, path + 'nz' + format
+    ];
+
+
+
+
+
+
+
+  var loader = new THREE.CubeTextureLoader();
+  //loader.onLoad = 
+
+
+
+
+  var path = "skybox/";
+  var format = '.jpg';
+  var urls = [
+      path + 'px' + format, path + 'nx' + format,
+      path + 'py' + format, path + 'ny' + format,
+      path + 'pz' + format, path + 'nz' + format
+    ];
+  var reflectionCube = loader.load( urls ,function(){
+    console.log("HAHA");
+    onLoad();
+  });
+  reflectionCube.format = THREE.RGBFormat;
+  //G.cubeMap = reflectionCube;
+  G.skyMap = reflectionCube;
+
+
+
+
+  var path = "park/";
+  var format = '.jpg';
+  var urls = [
+      path + 'posx' + format, path + 'negx' + format,
+      path + 'posy' + format, path + 'negy' + format,
+      path + 'posz' + format, path + 'negz' + format
+    ];
+
+
+  var parkCube = loader.load( urls ,function(){
+    console.log("HAHA");
+    onLoad();
+  });
+  parkCube.format = THREE.RGBFormat;
+  G.parkMap = parkCube;
+
+
+  var path = "castle/";
+  var format = '.jpg';
+  var urls = [
+      path + 'px' + format, path + 'nx' + format,
+      path + 'py' + format, path + 'ny' + format,
+      path + 'pz' + format, path + 'nz' + format
+    ];
+
+
+  var castleCube = loader.load( urls ,function(){
+    console.log("HAHA");
+    onLoad();
+  });
+  castleCube.format = THREE.RGBFormat;
+  G.castleMap = castleCube;
+
+
+  var path = "pisa/";
+  var format = '.png';
+  var urls = [
+      path + 'px' + format, path + 'nx' + format,
+      path + 'py' + format, path + 'ny' + format,
+      path + 'pz' + format, path + 'nz' + format
+    ];
+
+
+  var pisaCube = loader.load( urls ,function(){
+    console.log("HAHA");
+    onLoad();
+  });
+  pisaCube.format = THREE.RGBFormat;
+  G.pisaMap = pisaCube;
+}
 
 
 function loadAudio(){
