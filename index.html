@@ -117,12 +117,32 @@
 
     <div id="web">
 
-
     <ul>
+      <li><h2>Projects</h2></li>
       <li><a href="http://cabbi.bo/enough">ENOUGH</a></li>
+      <li><a href="http://l-u-n-e.com">L U N E</a></li>
+      <li><a href="http://cabbi.bo/growth">Growth</a></li>
+      <li><a href="http://cabbi.bo/beyond">Beyond</a></li>
+      <li><h2>Sites</h2></li>
       <li><a href="http://cabbi.bo">cabbi.bo</a></li>
       <li><a href="http://cabbibo.com">cabbibo.com</a></li>
+
     </ul>
+   
+    </div>
+
+    <div id="friends">
+      <ul>
+      <li><h2>VR</h2></li>
+      <li><a href="http://northwaygames.com/">Northway Games</a></li>
+      <li><a href="http://buffalovisiongames.com/irrex/">Buffalo Vision</a></li>
+      <li><a href="http://mike-tucker.com/15/">Mike Tucker</a></li>
+      <li><h2>Web</h2></li>
+      <li><a href="http://mrdoob.com/">Mr.Doob</a></li>
+      <li><a href="clicktorelease.com">The Spite</a></li>
+      <li><a href="http://hughsk.io/">Hugh Kennedy</a></li>
+      <li><a href="http://twitter.com/macbooktall">Connor Bell</a></li>
+      </ul>
     </div>
 
     <div id="hello">
@@ -146,6 +166,7 @@
       <a onclick="show('demos')"> vive </a>
       <a onclick="show('words')"> words </a>
       <a onclick="show('web')"> web </a>
+      <a onclick="show('friends')"> friends </a>
       <a onclick="show('hello')"> hello </a>
     </div>
   
@@ -161,6 +182,7 @@
       G.words = document.getElementById("words");
       G.demos = document.getElementById("demos");
       G.hello = document.getElementById("hello");
+      G.friends = document.getElementById("friends");
       G.textStuff = document.getElementById("textStuff");
       G.is = document.getElementById("is");
     }
@@ -170,6 +192,7 @@
       if( document.contains( G.words ) ){G.textStuff.removeChild( G.words );}
       if( document.contains( G.demos ) ){G.textStuff.removeChild( G.demos );}
       if( document.contains( G.hello ) ){G.textStuff.removeChild( G.hello );}
+      if( document.contains( G.friends ) ){G.textStuff.removeChild( G.friends );}
     }
 
     function show( name ){
@@ -200,6 +223,12 @@
         G.uniforms.t_cube.value = G.castleMap;
         G.uniforms.noiseSize1.value = .6;
         G.uniforms.noiseSize2.value = 1;
+      }
+
+      if( name == "friends"){
+        G.uniforms.t_cube.value = G.skyMap;
+        G.uniforms.noiseSize1.value = 2;
+        G.uniforms.noiseSize2.value = .1;
       }
 
       if( name == "hello"){
